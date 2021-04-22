@@ -52,6 +52,8 @@ a {
 	border-style: solid;
 	border-color: black;
 	border-radius: 10px 10px 10px 10px;
+	width: auto;
+	overflow: auto;
 }
 .container-trabajos {
 	box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
@@ -59,6 +61,8 @@ a {
 	border-style: solid;
 	border-color: black;
 	border-radius: 10px 10px 10px 10px;
+	width: auto;
+	overflow: auto;
 }
 
 .Trabajos-carta {
@@ -74,4 +78,35 @@ a {
 	background: #e4e4e4;
 	height: 100%;
 	box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
+}
+
+.page {
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto 0 auto;
+}
+
+.container-trabajosX.col-sm-12 {
+	box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
+	border-width: 0.7px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 10px 10px 10px 10px;
+	float: left;
+}
+
+.card.text-center {
+	float: left;
+}
+.page-head-trabajos {
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto 0 auto;
+}
+.Trabajos_carta {
+	box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
+	border-width: 0.7px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 10px 10px 10px 10px;
 }
