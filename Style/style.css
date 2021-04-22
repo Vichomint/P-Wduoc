@@ -47,23 +47,27 @@ a {
 }
 
 .container-servicios {
-	width: 50%;
 	box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
+	border-width: 0.7px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 10px 10px 10px 10px;
 }
 .container-trabajos {
-	width: 50%;
 	box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
+	border-width: 0.7px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 10px 10px 10px 10px;
 }
 
 .Trabajos-carta {
 	margin-left: 10px;
 	margin-top: 5px;
-	box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
 }
 .Servicios-carta {
 	margin-left: 10px;
 	margin-top: 5px;
-	box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
 	margin-right: 10px;
 }
 .card {
