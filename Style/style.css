@@ -124,3 +124,14 @@ a {
 	max-width: auto;
 	margin: 0 auto 0 auto;
 }
+#carrusels {
+	width: 98%;
+	margin: 0 auto;
+	align-content: center;
+}
+
+.container-Carusel {
+	width: 95%;
+	max-width: auto;
+	margin: 0 auto 0 auto;
+}
