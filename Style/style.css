@@ -110,3 +110,8 @@ a {
 	border-color: black;
 	border-radius: 10px 10px 10px 10px;
 }
+.page_cortizar {
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto 0 auto;
+}
