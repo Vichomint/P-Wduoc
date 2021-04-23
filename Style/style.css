@@ -103,10 +103,34 @@ a {
 	max-width: 900px;
 	margin: 0 auto 0 auto;
 }
-.Trabajos_carta {
+
+
+.page-text{
+	width: 500px;
+	padding: 10px;
+	margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 15px;
+	
+
+
+
+}
+.page__text	{
+	border-style: solid;
 	box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
 	border-width: 0.7px;
-	border-style: solid;
 	border-color: black;
 	border-radius: 10px 10px 10px 10px;
-}
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	
+	
+	
+	
+	
+	
+
+
+
+
+}	
