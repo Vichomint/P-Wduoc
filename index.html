@@ -12,8 +12,55 @@
 		/>
 		<link rel="stylesheet" href="Style/style.css" />
 		<title>Home</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			function findMe() {
+				//Obtenemos latitud y longitud
+				function localizacion(posicion) {
+					var latitude = posicion.coords.latitude;
+					var longitude = posicion.coords.longitude;
+					var URL =
+						"http://api.openweathermap.org/data/2.5/weather?lat=" +
+						latitude +
+						"&lon=" +
+						longitude +
+						"&appid=6fada678d59ab16a617020dba11248c5";
+					$.get(URL, function (data) {
+						var temp = Math.trunc(data.main.temp - 273.15);
+						console.log(data);
+						console.log(data.main.temp - 273.15);
+						//$.each(data.main, function(i,item){
+						//	console.log(item.temp_max);
+						//	console.log(item);
+						//})
+						$.each(data.weather, function (i, item) {
+							console.log(item.icon);
+							$("#map").append(
+								"<img src=http://openweathermap.org/img/wn/" +
+									item.icon +
+									"@2x.png alt=>"
+							);
+							$("#map").append(
+								"<p style='color:white'>Estado: " + item.description + "</p>"
+							);
+							$("#map").append(
+								"<p style='color:white'>Grados: " + temp + "°C" + "</p>"
+							);
+						});
+
+						$("#map").append(
+							"<p style='color:white'>Comuna: " + data.name + "</p>"
+						);
+					});
+				}
+				function error() {
+					output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
+				}
+				navigator.geolocation.getCurrentPosition(localizacion, error);
+			}
+		</script>
 	</head>
-	<header class="page-head">
+	<header class="page-head" onload="findMe()">
 		<img
 			class="logo"
 			src="img/Recurso1.svg"
@@ -21,6 +68,22 @@
 			width="100"
 			height="50"
 		/>
+		<div class="clima">
+			<div class="row">
+				<div
+					style="
+						float: left;
+						margin: right 10px;
+						margin-left: 30px;
+						margin-right: 15px;
+					"
+				>
+					<h1 style="color: white">Clima</h1>
+				</div>
+				<div id="map" style="float: left; margin-top: -30px;""></div>
+			</div>
+		</div>
+
 		<nav class="navbar navbar-expand-lg">
 			<button
 				class="navbar-toggler"
@@ -140,7 +203,7 @@
 			</div>
 		</nav>
 	</header>
-	<body>
+	<body onload="findMe()">
 		<div class="container-Carusel">
 			<div class="row">
 				<div class="col-sm-12" style="padding-right: 0px; padding-left: 0px">
@@ -339,11 +402,6 @@
 				</div>
 			</div>
 		</div>
-		<script
-			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-			crossorigin="anonymous"
-		></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
